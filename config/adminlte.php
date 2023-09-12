@@ -369,22 +369,18 @@ return [
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        ['header' => 'OPCIONES DE BLOG'],
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'       => 'Lista de post',
+            'route'        => 'admin.posts.index',
+            'icon' => 'fa fa-fw fa-clipboard',
         ],
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text'       => 'Crear nuevo post',
+            'icon' => 'fa fa-fw fa-file',
+            'route'        => 'admin.posts.create',
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+
     ],
 
     /*
@@ -539,5 +535,5 @@ return [
     |
     */
 
-    'livewire' => false,
+    'livewire' => true,
 ];

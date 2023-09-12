@@ -37,7 +37,7 @@ class PostController extends Controller
         $posts = Post::where('category_id', $category->id)
             ->where('status', 2)
             ->latest('id')
-            ->paginate(2);
+            ->paginate(5);
 
         return view('posts.category', compact('posts', 'category'));
     }
@@ -45,8 +45,6 @@ class PostController extends Controller
 
     public function tag(Tag $tag)
     {
-
-
 
         $posts = $tag->posts()
             ->where('status', 2)
